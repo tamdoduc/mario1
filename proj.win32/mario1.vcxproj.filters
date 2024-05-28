@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projects\mario1\Classes\AppDelegate.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\HelloWorldScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\Character.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\Bullet.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\TileMap.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\Enemy.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\EnemyManager.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\MyCamera.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\cocos2d\cocos\precheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projects\mario1\Classes\AppDelegate.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\HelloWorldScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\Character.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\Bullet.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\TileMap.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\Enemy.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\EnemyManager.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\MyCamera.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\proj.win32\main.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\proj.win32\resource.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\CloseNormal.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\CloseSelected.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\HelloWorld.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Map.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Map.tmx">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Map.tsx">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\arrow3.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\arrow4.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\background.jpg">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\enemy.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\fonts\Marker Felt.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\fonts\arial.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\player.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\res\.gitkeep">
+      <Filter>Resources\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects\mario1\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\Projects\mario1\proj.win32\game.rc">
+      <Filter>Source Files\proj.win32</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{A1E9959C-2448-3EC6-884A-65CB3C0412AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\fonts">
+      <UniqueIdentifier>{956DA829-D052-3A89-BE18-998ED044624B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{95986A70-4215-37BA-BF03-C7C5D0D0A169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6BF5D92E-2F45-3C54-AAF3-CA07187BF4D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes">
+      <UniqueIdentifier>{0EE1CDF6-3EEA-31AD-AF75-5176D1AF1D21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32">
+      <UniqueIdentifier>{61FDBBD1-EBFD-32E1-B575-28AE76765050}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\mainmenubg.jpg">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\left.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\right.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\up.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\attack.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\ice.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

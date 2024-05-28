@@ -1,0 +1,4 @@
+﻿  AppDelegate.cpp
+  Bullet.cpp
+D:\Projects\mario1\Classes\AppDelegate.cpp(35,44): warning C4305: 'argument': truncation from 'double' to 'float'
+  mario1.vcxproj -> D:\Projects\mario1\proj.win32\bin\mario1\Debug\mario1.exe

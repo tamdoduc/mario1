@@ -1,0 +1,20 @@
+^D:\PROJECTS\MARIO1\PROJ.WIN32\CMAKEFILES\1CDD7435A934D8A3E39EE769BB72A676\SYNC_RESOURCE-MARIO1.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying resources for mario1 ..."
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\PROJECTS\MARIO1\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Projects/mario1 -BD:/Projects/mario1/proj.win32 --check-stamp-file D:/Projects/mario1/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

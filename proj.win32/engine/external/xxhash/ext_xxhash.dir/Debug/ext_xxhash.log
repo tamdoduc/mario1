@@ -1,0 +1,3 @@
+﻿  Building Custom Rule D:/Projects/mario1/cocos2d/external/xxhash/CMakeLists.txt
+  xxhash.c
+  ext_xxhash.vcxproj -> D:\Projects\mario1\proj.win32\lib\Debug\ext_xxhash.lib
