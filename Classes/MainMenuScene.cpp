@@ -35,8 +35,8 @@ bool MainMenuScene::init()
 
     auto background = Sprite::create("mainmenubg.jpg");
     background->setPosition(Vec2(this->getContentSize().width / 2, this->getContentSize().height / 2));
-    int desiredWidth = 500;
-    int desiredHeight = 500;
+    int desiredWidth = 960;
+    int desiredHeight = 540;
 
     background->setScale(desiredWidth / background->getContentSize().width, desiredHeight / background->getContentSize().height);
     this->addChild(background, -1);

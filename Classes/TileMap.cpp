@@ -60,8 +60,8 @@ void TileMap::addColliders()
             auto collider = PhysicsBody::createBox(Size(width, height), PhysicsMaterial(0.1f, 1.0f, 0.0f));
             collider->setDynamic(false);
             collider->setCategoryBitmask(0x01);
-            collider->setCollisionBitmask(0x01);
-            collider->setContactTestBitmask(0x01);
+            collider->setCollisionBitmask(0x0E);
+            collider->setContactTestBitmask(0x0E);
             CCLOG("aaa %f",width);
             // Tạo node đại diện cho collider và thêm vào tilemap
             auto node = Node::create();
@@ -72,3 +72,14 @@ void TileMap::addColliders()
     }
 }
 
+Size TileMap::getMapSize()
+{
+    if (_tileMap)
+    {
+        // Get the map's size in tiles and multiply by the tile size to get the total size in pixels
+        float width = _tileMap->getMapSize().width * _tileMap->getTileSize().width;
+        float height = _tileMap->getMapSize().height * _tileMap->getTileSize().height;
+        return Size(width, height);
+    }
+    return Size::ZERO;
+}

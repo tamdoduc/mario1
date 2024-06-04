@@ -24,7 +24,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if (!glview) {
-        glview = GLViewImpl::createWithRect("My Game", cocos2d::Rect(0, 0, 500, 500));
+        glview = GLViewImpl::createWithRect("My Game", cocos2d::Rect(0, 0,960 ,540 ));
         director->setOpenGLView(glview);
     }
 

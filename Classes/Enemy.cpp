@@ -19,7 +19,7 @@ Enemy* Enemy::create()
 
 bool Enemy::init()
 {
-    if (!Sprite::initWithFile("enemy.png"))
+    if (!Sprite::initWithFile("Enemy/Fly_1.png"))
     {
         return false;
     }
@@ -38,9 +38,9 @@ bool Enemy::init()
     // Add physics body
     enemyBody = PhysicsBody::createBox(this->getContentSize());
     enemyBody->setDynamic(true);
-    enemyBody->setCategoryBitmask(0x03);
-    enemyBody->setCollisionBitmask(0x03);
-    enemyBody->setContactTestBitmask(0x03);
+    enemyBody->setCategoryBitmask(0x04);
+    enemyBody->setCollisionBitmask(0x0B);
+    enemyBody->setContactTestBitmask(0x0B);
     enemyBody->setGravityEnable(false);
     this->setPhysicsBody(enemyBody);
 
@@ -48,6 +48,7 @@ bool Enemy::init()
     auto contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = CC_CALLBACK_1(Enemy::onContactBegin, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    createRunAnimation();
 
     this->scheduleUpdate();
 
@@ -83,11 +84,14 @@ void Enemy::update(float dt)
 void Enemy::moveLeft()
 {
     this->setPositionX(this->getPositionX() - moveSpeed * Director::getInstance()->getDeltaTime());
+    this->setScaleX(1 * fabs(this->getScaleX()));
 }
 
 void Enemy::moveRight()
 {
     this->setPositionX(this->getPositionX() + moveSpeed * Director::getInstance()->getDeltaTime());
+    this->setScaleX(-1 * fabs(this->getScaleX()));
+
 }
 
 bool Enemy::onContactBegin(cocos2d::PhysicsContact& contact)
@@ -103,4 +107,20 @@ bool Enemy::onContactBegin(cocos2d::PhysicsContact& contact)
     //}
 
     return false;
+}
+void Enemy::createRunAnimation()
+{
+    std::vector<std::string> frameNames;
+    for (int i = 1; i <= 6; ++i) // Replace N with the number of frames
+    {
+        frameNames.push_back(StringUtils::format("Enemy/Fly_%d.png", i));
+    }
+
+    runAnimate = CustomAnimation::create(frameNames, 0.1f);
+    this->addChild(runAnimate);
+    runAnimate->setPosition(this->getContentSize() / 2);
+    runAnimate->setVisible(true);
+    runAnimate->start();
+    //// ẩn hình hiện tại
+    this->setTextureCoords(cocos2d::Rect());
 }

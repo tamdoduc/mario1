@@ -65,6 +65,9 @@ list(APPEND GAME_SOURCE
      Classes/EnemyManager.cpp
      Classes/MyCamera.cpp
      Classes/MainMenuScene.cpp
+     Classes/CustomAnimation.cpp
+     Classes/Ground.cpp
+
 
      )
 list(APPEND GAME_HEADER
@@ -77,6 +80,9 @@ list(APPEND GAME_HEADER
      Classes/EnemyManager.h
      Classes/MyCamera.h
      Classes/MainMenuScene.h
+     Classes/CustomAnimation.h
+     Classes/Singleton.h
+     Classes/Ground.h
      )
 
 if(ANDROID)

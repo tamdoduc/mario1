@@ -118,8 +118,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/mario1/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Projects/mario1/proj.win32/bin/mario1/Debug/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -286,8 +285,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/mario1/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Projects/mario1/proj.win32/bin/mario1/Release/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -454,8 +452,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/mario1/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Projects/mario1/proj.win32/bin/mario1/MinSizeRel/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -621,8 +618,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/mario1/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Projects/mario1/proj.win32/bin/mario1/RelWithDebInfo/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -813,7 +809,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\MainMenuScene.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\AppDelegate.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\HelloWorldScene.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\Character.h" />
@@ -822,9 +817,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Projects\mario1\Classes\Enemy.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\EnemyManager.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\MyCamera.h" />
+    <ClInclude Include="D:\Projects\mario1\Classes\MainMenuScene.h" />
+    <ClInclude Include="D:\Projects\mario1\Classes\CustomAnimation.h" />
+    <ClInclude Include="D:\Projects\mario1\Classes\Singleton.h" />
+    <ClInclude Include="D:\Projects\mario1\Classes\Ground.h" />
     <ClInclude Include="D:\Projects\mario1\proj.win32\main.h" />
     <ClInclude Include="D:\Projects\mario1\proj.win32\resource.h" />
-    <ClCompile Include="..\Classes\MainMenuScene.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\AppDelegate.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\Character.cpp" />
@@ -833,22 +831,75 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\Projects\mario1\Classes\Enemy.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\EnemyManager.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\MyCamera.cpp" />
+    <ClCompile Include="D:\Projects\mario1\Classes\MainMenuScene.cpp" />
+    <ClCompile Include="D:\Projects\mario1\Classes\CustomAnimation.cpp" />
+    <ClCompile Include="D:\Projects\mario1\Classes\Ground.cpp" />
     <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp" />
     <ResourceCompile Include="D:\Projects\mario1\proj.win32\game.rc" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_5.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_6.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_7.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_5.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_6.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_7.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_10.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_11.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_5.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_6.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_7.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_8.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_9.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Jump_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_10.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_11.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_12.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_5.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_6.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_7.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_8.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_9.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\CloseNormal.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\CloseSelected.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_5.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_6.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\GameOver.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\HelloWorld.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\Map.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\Map.tmx" />
     <ClInclude Include="D:\Projects\mario1\Resources\Map.tsx" />
-    <ClInclude Include="D:\Projects\mario1\Resources\arrow3.png" />
-    <ClInclude Include="D:\Projects\mario1\Resources\arrow4.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\attack.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\background.jpg" />
     <ClInclude Include="D:\Projects\mario1\Resources\enemy.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\fonts\Marker Felt.ttf" />
     <ClInclude Include="D:\Projects\mario1\Resources\fonts\arial.ttf" />
-    <ClInclude Include="D:\Projects\mario1\Resources\player.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\heart.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\heartMissing.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\ice.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\left.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\mainmenubg.jpg" />
     <ClInclude Include="D:\Projects\mario1\Resources\res\.gitkeep" />
+    <ClInclude Include="D:\Projects\mario1\Resources\right.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\up.png" />
     <ClCompile Include="D:\Projects\mario1\cocos2d\cocos\precheader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -912,14 +963,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{8FCC90D9-B7BB-3A5F-B58A-1DAD33F67D2F}</Project>
       <Name>external</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Resources\attack.png" />
-    <Image Include="..\Resources\ice.png" />
-    <Image Include="..\Resources\left.png" />
-    <Image Include="..\Resources\mainmenubg.jpg" />
-    <Image Include="..\Resources\right.png" />
-    <Image Include="..\Resources\up.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

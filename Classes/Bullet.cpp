@@ -38,9 +38,9 @@ bool Bullet::init()
 	// Set up physics body for collision detection
 	auto bulletBody = PhysicsBody::createBox(this->getContentSize());
 	bulletBody->setDynamic(false);
-	bulletBody->setCategoryBitmask(0x02); // Category bitmask for bullet
-	bulletBody->setCollisionBitmask(0x03); // Collision bitmask for bullet
-	bulletBody->setContactTestBitmask(0x03); // Contact test bitmask for bullet
+	bulletBody->setCategoryBitmask(0x08); // Category bitmask for bullet
+	bulletBody->setCollisionBitmask(0x04); // Collision bitmask for bullet
+	bulletBody->setContactTestBitmask(0x04); // Contact test bitmask for bullet
 	this->setPhysicsBody(bulletBody);
 
 	// Set up contact listener
@@ -79,7 +79,8 @@ bool Bullet::onContactBegin(cocos2d::PhysicsContact& contact)
 {
 	auto nodeA = contact.getShapeA()->getBody()->getNode();
 	auto nodeB = contact.getShapeB()->getBody()->getNode();
-
+	if (nodeA != this && nodeB != this)
+		return false;
 	// Lấy tên thực sự của node A và node B
 	std::string nodeNameA = nodeA ? typeid(*nodeA).name() : "Unknown";
 	std::string nodeNameB = nodeB ? typeid(*nodeB).name() : "Unknown";

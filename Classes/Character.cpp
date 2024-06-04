@@ -1,153 +1,343 @@
 ﻿#include "Character.h"
-#include "Bullet.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 
 Character* Character::create()
 {
-    Character* pRet = new(std::nothrow) Character();
-    if (pRet && pRet->init())
-    {
-        pRet->autorelease();
-        return pRet;
-    }
-    else
-    {
-        delete pRet;
-        return nullptr;
-    }
-}
+	Character* pRet = new(std::nothrow) Character();
 
+	if (pRet && pRet->init())
+	{
+		pRet->autorelease();
+		return pRet;
+	}
+	else
+	{
+		delete pRet;
+		return nullptr;
+	}
+}
+void Character::setScene(HelloWorld* helloWorldScene)
+{
+	this->helloWorldScene = helloWorldScene;
+}
 bool Character::init()
 {
-    if (!Sprite::init())
-    {
-        return false;
-    }
+	if (!Sprite::init())
+	{
+		return false;
+	}
 
-    this->setTexture("player.png");
+	this->setTexture("Character/Idle_1.png");
 
-    int desiredWidth = 25;
-    int desiredHeight = 25;
+	int desiredWidth = 25;
+	int desiredHeight = 25;
 
-    this->setScale(desiredWidth / this->getContentSize().width, desiredHeight / this->getContentSize().height);
+	this->setScale(desiredWidth / this->getContentSize().width, desiredHeight / this->getContentSize().height);
 
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    this->setPosition(Vec2(50, 100));
+	startPos = Vec2(50, 70);
+	this->setPosition(startPos);
+	PhysicsMaterial material;
+	material.density = 0.01f;
+	material.friction = 0.1f;
+	material.restitution = 0.1f;
 
-    PhysicsMaterial material;
-    material.density = 0.01f;
-    material.friction = 0.1f;
-    material.restitution = 0.1f;
+	characterBody = PhysicsBody::createBox(this->getContentSize(), material);
+	characterBody->setDynamic(true);
+	characterBody->setGravityEnable(true);
+	characterBody->setMass(9.80f);
+	characterBody->setRotationEnable(false);
 
-    auto characterBody = PhysicsBody::createBox(this->getContentSize(), material);
-    characterBody->setDynamic(true);
-    characterBody->setGravityEnable(true);
-    characterBody->setMass(9.80f);
-    characterBody->setRotationEnable(false);
+	characterBody->setCategoryBitmask(0x02);
+	characterBody->setCollisionBitmask(0x05);
+	characterBody->setContactTestBitmask(0x05);
 
-    characterBody->setCategoryBitmask(0x01);
-    characterBody->setCollisionBitmask(0x07);
-    characterBody->setContactTestBitmask(0x07);
+	this->setPhysicsBody(characterBody);
 
-    this->setPhysicsBody(characterBody);
+	isMove = false;
+	isMoveLeft = false;
+	isMoveRight = false;
+	isJumping = false;
+	direction = 1;
+	jumpForce = 1500.0f;
 
-    isMove = false;
-    isMoveLeft = false;
-    isMoveRight = false;
-    isJumping = false;
-    direction = 1;
-    jumpForce = 1500.0f;
+	auto contactListener = EventListenerPhysicsContact::create();
+	contactListener->onContactBegin = CC_CALLBACK_1(Character::onContactBegin, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
-    auto contactListener = EventListenerPhysicsContact::create();
-    contactListener->onContactBegin = CC_CALLBACK_1(Character::onContactBegin, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+	this->scheduleUpdate();
 
-    return true;
+	createIdleAnimation(); // Create the walk animation
+	createJumpAnimation(); // Create the walk animation
+	createRunAnimation(); // Create the walk animation
+	createDieAnimation(); // Create the walk animation
+	createAppearAnimation();
+	//jumpAnimate->setVisible(true);
+	//jumpAnimate->start();
+
+
+	ReSpawn(startPos);
+
+	coolDown = ATTACKTIME;
+	return true;
 }
-
-bool Character::onContactBegin(PhysicsContact& contact)
+void Character::ReSpawn(cocos2d::Vec2 pos)
 {
-    CCLOG("Character Contact");
-    auto nodeA = contact.getShapeA()->getBody()->getNode();
-    auto nodeB = contact.getShapeB()->getBody()->getNode();
-
-    // Lấy tên thực sự của node A và node B
-    std::string nodeNameA = nodeA ? typeid(*nodeA).name() : "Unknown";
-    std::string nodeNameB = nodeB ? typeid(*nodeB).name() : "Unknown";
-
-    // Hiển thị tên thực sự của node A và node B trong log
-    CCLOG("Bullet Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
-
-    // Kiểm tra xem va chạm có xảy ra với đối tượng Enemy hay không
-    if (nodeNameA == "class Enemy" || nodeNameB == "class Enemy") // Giả sử Enemy có tag là 2
-    {
-        CCLOG("LOSE");
-        //// if (nodeNameA == "class Enemy")
-        //nodeA->removeFromParent();
-        ////else 
-        //nodeB->removeFromParent();
-
-        // Loại bỏ viên đạn khi va chạm xảy ra với Enemy
-        return true; // Chỉ định rằng va chạm đã được xử lý
-    }
-
-    isJumping = false;
-    return true;
+	appearAnimate->setVisible(true);
+	appearAnimate->start();
+	isPlaying = false;
+	this->setPosition(pos);
+	this->scheduleOnce([this](float) {
+		isPlaying = true;
+	appearAnimate->setVisible(false);
+	appearAnimate->stop();
+	idleAnimate->setVisible(true);
+	idleAnimate->start();
+		}, 1.05f, "appearing");
 }
-
-void Character::moveTo(const Vec2& position)
+void Character::createAppearAnimation()
 {
-    this->setPosition(position);
-}
+	std::vector<std::string> frameNames;
+	for (int i = 1; i <= 7; ++i) // Replace N with the number of frames
+	{
+		frameNames.push_back(StringUtils::format("Character/Appearing_%d.png", i));
+	}
 
+	appearAnimate = CustomAnimation::create(frameNames, 0.15f);
+	this->addChild(appearAnimate);
+	appearAnimate->setPosition(this->getContentSize() / 2);
+	appearAnimate->setVisible(false);
+	//idleAnimate->start();
+	//// ẩn hình hiện tại
+	this->setTextureCoords(cocos2d::Rect());
+}
+void Character::createIdleAnimation()
+{
+	std::vector<std::string> frameNames;
+	for (int i = 1; i <= 11; ++i) // Replace N with the number of frames
+	{
+		frameNames.push_back(StringUtils::format("Character/idle_%d.png", i));
+	}
+
+	idleAnimate = CustomAnimation::create(frameNames, 0.1f);
+	this->addChild(idleAnimate);
+	idleAnimate->setPosition(this->getContentSize() / 2);
+	idleAnimate->setVisible(false);
+	//idleAnimate->start();
+	//// ẩn hình hiện tại
+	this->setTextureCoords(cocos2d::Rect());
+}
+void Character::createJumpAnimation()
+{
+	std::vector<std::string> frameNames;
+	for (int i = 1; i <= 1; ++i) // Replace N with the number of frames
+	{
+		frameNames.push_back(StringUtils::format("Character/Jump_%d.png", i));
+	}
+
+	jumpAnimate = CustomAnimation::create(frameNames, 0.1f);
+	this->addChild(jumpAnimate);
+	jumpAnimate->setPosition(this->getContentSize() / 2);
+	jumpAnimate->setVisible(false);
+	//jumpAnimate->start();
+	//// ẩn hình hiện tại
+   // this->setTextureCoords(cocos2d::Rect());
+}
+void Character::createRunAnimation()
+{
+	std::vector<std::string> frameNames;
+	for (int i = 1; i <= 12; ++i) // Replace N with the number of frames
+	{
+		frameNames.push_back(StringUtils::format("Character/Run_%d.png", i));
+	}
+
+	runAnimate = CustomAnimation::create(frameNames, 0.1f);
+	this->addChild(runAnimate);
+	runAnimate->setPosition(this->getContentSize() / 2);
+	runAnimate->setVisible(false);
+	//runAnimate->start();
+	//// ẩn hình hiện tại
+	//this->setTextureCoords(cocos2d::Rect());
+}
+void Character::createDieAnimation()
+{
+	std::vector<std::string> frameNames;
+	for (int i = 1; i <= 7; ++i) // Replace N with the number of frames
+	{
+		frameNames.push_back(StringUtils::format("Character/Hit_%d.png", i));
+	}
+
+	dieAnimate = CustomAnimation::create(frameNames, 0.3f);
+	this->addChild(dieAnimate);
+	dieAnimate->setPosition(this->getContentSize() / 2);
+	dieAnimate->setVisible(false);
+	//idleAnimate->start();
+	//// ẩn hình hiện tại
+	this->setTextureCoords(cocos2d::Rect());
+}
 void Character::moveDirection(const bool m_isMoveLeft)
 {
-    isMove = true;
-    isMoveLeft = m_isMoveLeft;
-    isMoveRight = !m_isMoveLeft;
-    direction = isMoveLeft ? -1 : 1;
+	if (!isPlaying)
+		return;
+	if (!isMove && !isJumping)
+	{
+		CancelAllAnimation();
 
-    this->setScaleX(direction * fabs(this->getScaleX()));
+		runAnimate->setVisible(true);
+		runAnimate->start();
+	}
+	isMove = true;
+	isMoveLeft = m_isMoveLeft;
+	isMoveRight = !m_isMoveLeft;
+	direction = isMoveLeft ? -1 : 1;
+
+	this->setScaleX(direction * fabs(this->getScaleX()));
+
 }
 
 void Character::cancelMove()
 {
-    isMove = false;
-    isMoveLeft = false;
-    isMoveRight = false;
+	isMove = false;
+	isMoveLeft = false;
+	isMoveRight = false;
+
+
+	this->stopAllActions(); // Stop the walk animation
+	CancelAllAnimation();
+	if (isPlaying)
+	{
+		idleAnimate->setVisible(true);
+		idleAnimate->start();
+	}
 }
 
 void Character::update(float dt)
 {
-    if (isMove)
-    {
-        Vec2 currentPosition = this->getPosition();
-        float movementSpeed = 25.0f;
+	if (!isPlaying)
+		return;
+	if (isMove)
+	{
+		Vec2 currentPosition = this->getPosition();
+		float movementSpeed = 25.0f;
 
-        currentPosition.x += direction * movementSpeed * dt;
+		currentPosition.x += direction * movementSpeed * dt;
 
-        this->setPosition(currentPosition);
-    }
+		this->setPosition(currentPosition);
+
+	}
+	if (coolDown < ATTACKTIME)
+		coolDown += dt;
 }
 
 void Character::shoot()
 {
-    auto bullet = Bullet::create();
-    bullet->setPosition(this->getPosition()+ cocos2d::Vec2(15*direction,0));
-    this->getParent()->addChild(bullet);
+	if (!isPlaying)
+		return;
+	if (coolDown < ATTACKTIME)
+		return;
+	coolDown = 0;
+	auto bullet = Bullet::create();
+	bullet->setPosition(this->getPosition() + cocos2d::Vec2(15 * direction, 0));
+	this->getParent()->addChild(bullet);
 
-    bullet->shoot(direction);
+	bullet->shoot(direction);
 }
 
 void Character::jump()
 {
-    CCLOG("isJumping %s", isJumping ? "true" : "false");
-    if (!isJumping)
-    {
-        isJumping = true;
-        this->getPhysicsBody()->applyImpulse(Vec2(0, jumpForce));
-    }
+	if (!isPlaying)
+		return;
+	CCLOG("isJumping %s", isJumping ? "true" : "false");
+	if (!isJumping)
+	{
+		isJumping = true;
+		this->getPhysicsBody()->applyImpulse(Vec2(0, jumpForce));
+
+		runAnimate->setVisible(false);
+		runAnimate->stop();
+		idleAnimate->setVisible(false);
+		idleAnimate->stop();
+
+		jumpAnimate->setVisible(true);
+		jumpAnimate->start();
+	}
+}
+
+bool Character::onContactBegin(PhysicsContact& contact)
+{
+
+	if (!isPlaying)
+		return true;
+	CCLOG("Character Contact");
+	auto nodeA = contact.getShapeA()->getBody()->getNode();
+	auto nodeB = contact.getShapeB()->getBody()->getNode();
+
+	std::string nodeNameA = nodeA ? typeid(*nodeA).name() : "Unknown";
+	std::string nodeNameB = nodeB ? typeid(*nodeB).name() : "Unknown";
+
+	CCLOG("Bullet Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+	isJumping = false;
+	if (nodeNameA == "class Enemy" || nodeNameB == "class Enemy")
+	{
+		//CCLOG("LOSE");
+		OnLostHP();
+		return true;
+	}
+
+
+	return true;
+}
+
+void Character::OnLostHP()
+{
+	if (!isPlaying)
+		return;
+	HP--;
+	helloWorldScene->OnCharacterDie(HP);
+	OnDie();
+}
+void Character::OnDie()
+{
+	// Animation Die
+
+	isPlaying = false;
+	CancelAllAnimation();
+	dieAnimate->setVisible(true);
+	dieAnimate->start();
+
+	characterBody->setEnabled(false);
+
+	// Schedule a method to reset the character's position after 2 seconds
+	this->scheduleOnce([this](float) {
+		if (HP > 0)
+		OnRevive();
+		else
+		{
+			helloWorldScene->OnLose();
+		}
+		}, 3.0f, "reset_position_key");
+}
+void Character::OnRevive()
+{
+	cancelMove();
+	CancelAllAnimation();
+	characterBody->setEnabled(true);
+	ReSpawn(startPos);
+}
+void Character::CancelAllAnimation()
+{
+	idleAnimate->setVisible(false);
+	idleAnimate->stop();
+	jumpAnimate->setVisible(false);
+	jumpAnimate->stop();
+	runAnimate->setVisible(false);
+	runAnimate->stop();
+	dieAnimate->setVisible(false);
+	dieAnimate->stop();
+	appearAnimate->setVisible(false);
+	appearAnimate->stop();
 }

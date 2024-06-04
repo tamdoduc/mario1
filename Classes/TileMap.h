@@ -9,7 +9,7 @@ public:
     static TileMap* create(const std::string& tmxFile);
     virtual bool init(const std::string& tmxFile);
     void addColliders();
-
+    cocos2d::Size getMapSize();
 private:
     cocos2d::TMXTiledMap* _tileMap;
 };
