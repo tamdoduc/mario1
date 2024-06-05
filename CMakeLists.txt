@@ -67,8 +67,8 @@ list(APPEND GAME_SOURCE
      Classes/MainMenuScene.cpp
      Classes/CustomAnimation.cpp
      Classes/Ground.cpp
-
-
+     Classes/TutorialScene.cpp
+     Classes/Box.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
@@ -83,6 +83,8 @@ list(APPEND GAME_HEADER
      Classes/CustomAnimation.h
      Classes/Singleton.h
      Classes/Ground.h
+     Classes/TutorialScene.h
+     Classes/Box.h
      )
 
 if(ANDROID)

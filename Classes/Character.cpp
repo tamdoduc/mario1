@@ -1,5 +1,6 @@
 ﻿#include "Character.h"
 #include "HelloWorldScene.h"
+#include "TutorialScene.h"
 
 USING_NS_CC;
 
@@ -21,6 +22,10 @@ Character* Character::create()
 void Character::setScene(HelloWorld* helloWorldScene)
 {
 	this->helloWorldScene = helloWorldScene;
+}
+void Character::setScene(Tutorial* tutorialScene)
+{
+	this->tutorialScene = tutorialScene;
 }
 bool Character::init()
 {

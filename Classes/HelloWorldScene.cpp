@@ -13,7 +13,7 @@ HelloWorld* HelloWorld::getInstance()
 	}
 	return instance;
 }
-Scene* HelloWorld::createScene()sssss
+Scene* HelloWorld::createScene()
 {
 	
 	auto scene = Scene::createWithPhysics();
@@ -35,6 +35,7 @@ bool HelloWorld::init()
 	_character->setScene(this);
 
 	auto background = Sprite::create("background.jpg");
+	background->setScale(1.3f);
 	background->setPosition(Vec2(this->getContentSize().width / 2, this->getContentSize().height / 2));
 	this->addChild(background, -1);
 

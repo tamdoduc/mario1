@@ -1,5 +1,6 @@
 ﻿#include "MainMenuScene.h"
 #include "HelloWorldScene.h"
+#include "TutorialScene.h"
 
 USING_NS_CC;
 
@@ -46,7 +47,9 @@ bool MainMenuScene::init()
 
 void MainMenuScene::menuPlayCallback(Ref* pSender)
 {
-    auto scene = HelloWorld::createScene();
+    //auto scene = HelloWorld::createScene();
+    auto scene = Tutorial::createScene();
+
     Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 255, 255)));
 }
 

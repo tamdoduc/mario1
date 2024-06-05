@@ -34,6 +34,12 @@
     <ClCompile Include="D:\Projects\mario1\Classes\Ground.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\TutorialScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\Box.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
@@ -76,6 +82,12 @@
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Classes\Ground.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\TutorialScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\Box.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\proj.win32\main.h">
@@ -228,6 +240,9 @@
     <ClInclude Include="D:\Projects\mario1\Resources\HelloWorld.png">
       <Filter>Resources</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\LevelComplete.jpg">
+      <Filter>Resources</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\Map.png">
       <Filter>Resources</Filter>
     </ClInclude>
@@ -236,6 +251,42 @@
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\Map.tsx">
       <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tileset.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tileset.tsx">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Background_tutorial.jpg">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Background_tutorial2.jpeg">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (1).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (2).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (3).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (4).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (5).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (6).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (7).png">
+      <Filter>Resources\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\hand.png">
+      <Filter>Resources\Tutorial</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\attack.png">
       <Filter>Resources</Filter>
@@ -267,6 +318,9 @@
     <ClInclude Include="D:\Projects\mario1\Resources\mainmenubg.jpg">
       <Filter>Resources</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\map_tutorial.tmx">
+      <Filter>Resources</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
@@ -294,6 +348,9 @@
     </Filter>
     <Filter Include="Resources\Enemy">
       <UniqueIdentifier>{F3835029-3F21-3EF0-86BF-659A15BD9711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Tutorial">
+      <UniqueIdentifier>{8AE125DD-D9DC-3818-A3C7-B2C99E996816}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\fonts">
       <UniqueIdentifier>{956DA829-D052-3A89-BE18-998ED044624B}</UniqueIdentifier>

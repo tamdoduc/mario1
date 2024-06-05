@@ -6,6 +6,7 @@
 #include "CustomAnimation.h"
 
 class HelloWorld;
+class Tutorial;
 
 
 class Character : public cocos2d::Sprite
@@ -14,6 +15,7 @@ public:
     static Character* create();
     virtual bool init();
     void setScene(HelloWorld* helloWorldScene);
+    void setScene(Tutorial* tutorialScene);
     void moveTo(const cocos2d::Vec2& position);
     void moveDirection(const bool m_isMoveLeft);
     void cancelMove();
@@ -49,6 +51,7 @@ private:
     CustomAnimation* dieAnimate;
     CustomAnimation* appearAnimate;
     HelloWorld* helloWorldScene;
+    Tutorial* tutorialScene;
 
     void OnLostHP();
     void createIdleAnimation();
