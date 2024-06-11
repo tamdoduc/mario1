@@ -1,0 +1,24 @@
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  proj.android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:30 (project)
+
+
+using toolchain file:D:\android-ndk-r26d\build\cmake\android.toolchain.cmake
+PROJECT_NAME:mario1
+PROJECT_SOURCE_DIR:D:/Projects/mario1
+COCOS2DX_ROOT_PATH:D:/Projects/mario1/cocos2d
+CMAKE_MODULE_PATH:D:/Projects/mario1/cocos2d/cmake/Modules/
+PROJECT_BINARY_DIR:D:/Projects/mario1/proj.android/app/.cxx/cmake/debug/armeabi-v7a
+ENGINE_BINARY_PATH:D:/Projects/mario1/proj.android/app/.cxx/cmake/debug/armeabi-v7a/engine
+PYTHON_PATH:C:/Python27/python.exe
+COCOS_COMMAND_PATH:D:/cocos2d-x-4.0/cocos2d-x-4.0/tools/cocos2d-console/bin/cocos
+HOST_SYSTEM:Windows
+CMAKE_GENERATOR: Ninja
+COCOS2DX_LUAJIT_ROOT:D:/cocos2d-x-4.0/cocos2d-x-4.0/tools/cocos2d-console/bin/../plugins/plugin_luacompile/bin
+Configuring done

@@ -48,20 +48,6 @@ void Ground::setGround(cocos2d::Vec2 newPos, cocos2d::Vec2 size)
     this->setPhysicsBody(groundBody);
 
 }
-template <typename T>
-T* getComponentInParent(Node* node)
-{
-    while (node != nullptr)
-    {
-        auto component = node->getComponent<T>();
-        if (component != nullptr)
-        {
-            return component;
-        }
-        node = node->getParent();
-    }
-    return nullptr;
-}
 
 bool Ground::onContactBegin(cocos2d::PhysicsContact& contact)
 {

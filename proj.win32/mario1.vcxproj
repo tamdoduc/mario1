@@ -823,6 +823,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Projects\mario1\Classes\Ground.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\TutorialScene.h" />
     <ClInclude Include="D:\Projects\mario1\Classes\Box.h" />
+    <ClInclude Include="D:\Projects\mario1\Classes\Door.h" />
     <ClInclude Include="D:\Projects\mario1\proj.win32\main.h" />
     <ClInclude Include="D:\Projects\mario1\proj.win32\resource.h" />
     <ClCompile Include="D:\Projects\mario1\Classes\AppDelegate.cpp" />
@@ -838,6 +839,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\Projects\mario1\Classes\Ground.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\TutorialScene.cpp" />
     <ClCompile Include="D:\Projects\mario1\Classes\Box.cpp" />
+    <ClCompile Include="D:\Projects\mario1\Classes\Door.cpp" />
     <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp" />
     <ResourceCompile Include="D:\Projects\mario1\proj.win32\game.rc" />
     <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_1.png" />
@@ -906,6 +908,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\hand.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\attack.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\background.jpg" />
+    <ClInclude Include="D:\Projects\mario1\Resources\door_1.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\door_2.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\door_3.png" />
+    <ClInclude Include="D:\Projects\mario1\Resources\door_4.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\enemy.png" />
     <ClInclude Include="D:\Projects\mario1\Resources\fonts\Marker Felt.ttf" />
     <ClInclude Include="D:\Projects\mario1\Resources\fonts\arial.ttf" />

@@ -69,6 +69,7 @@ list(APPEND GAME_SOURCE
      Classes/Ground.cpp
      Classes/TutorialScene.cpp
      Classes/Box.cpp
+     Classes/Door.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
@@ -85,6 +86,7 @@ list(APPEND GAME_HEADER
      Classes/Ground.h
      Classes/TutorialScene.h
      Classes/Box.h
+     Classes/Door.h
      )
 
 if(ANDROID)

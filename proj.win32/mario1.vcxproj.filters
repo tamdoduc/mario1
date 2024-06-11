@@ -40,6 +40,9 @@
     <ClCompile Include="D:\Projects\mario1\Classes\Box.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\Door.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
@@ -88,6 +91,9 @@
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Classes\Box.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\Door.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\proj.win32\main.h">
@@ -292,6 +298,18 @@
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\background.jpg">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\door_1.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\door_2.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\door_3.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\door_4.png">
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\enemy.png">

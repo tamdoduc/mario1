@@ -1,6 +1,7 @@
 ﻿#include "MainMenuScene.h"
 #include "HelloWorldScene.h"
 #include "TutorialScene.h"
+#include "platform/CCFileUtils.h"
 
 USING_NS_CC;
 
@@ -47,9 +48,22 @@ bool MainMenuScene::init()
 
 void MainMenuScene::menuPlayCallback(Ref* pSender)
 {
-    //auto scene = HelloWorld::createScene();
-    auto scene = Tutorial::createScene();
+    std::string filePath = cocos2d::FileUtils::getInstance()->getWritablePath() + "level.json";
+    auto fileUtils = cocos2d::FileUtils::getInstance();
 
+    Scene* scene;
+
+    // Check if the file exists
+    if (fileUtils->isFileExist(filePath))
+    {
+        // File exists, load HelloWorld scene
+        scene = HelloWorld::createScene();
+    }
+    else
+    {
+        // File does not exist, load Tutorial scene
+        scene = Tutorial::createScene();
+    }
     Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 255, 255)));
 }
 

@@ -1,0 +1,181 @@
+{
+  "buildFiles": [
+    "D:\\Projects\\mario1\\CMakeLists.txt",
+    "D:\\android-ndk-r26d\\build\\cmake\\android.toolchain.cmake",
+    "D:\\android-ndk-r26d\\build\\cmake\\android-legacy.toolchain.cmake",
+    "D:\\android-ndk-r26d\\build\\cmake\\platforms.cmake",
+    "D:\\android-ndk-r26d\\build\\cmake\\compiler_id.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\cmake\\Modules\\CocosBuildSet.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\cmake\\Modules\\CocosBuildHelpers.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\cmake\\Modules\\CocosConfigDefine.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\cmake\\Modules\\CocosConfigDepend.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\2d\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\3d\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\platform\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\physics\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\physics3d\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\math\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\navmesh\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\renderer\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\base\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\ui\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\network\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\audio\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\editor-support\\cocostudio\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\extensions\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\Box2D\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\cmake\\CocosExternalConfig.cmake",
+    "D:\\Projects\\mario1\\cocos2d\\external\\chipmunk\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\freetype2\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\recast\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\bullet\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\jpeg\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\openssl\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\uv\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\webp\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\websockets\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\tinyxml2\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\xxhash\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\xxtea\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\clipper\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\edtaa3func\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\ConvertUTF\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\poly2tri\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\md5\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\curl\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\png\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\android-specific\\cpufeatures\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\android-specific\\pvmp3dec\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\android-specific\\tremolo\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\zlib\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\external\\unzip\\CMakeLists.txt",
+    "D:\\Projects\\mario1\\cocos2d\\cocos\\platform\\android\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "ext_md5-Debug-armeabi-v7a": {
+      "artifactName": "ext_md5",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_md5",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_md5.a",
+      "runtimeFiles": []
+    },
+    "ext_xxhash-Debug-armeabi-v7a": {
+      "artifactName": "ext_xxhash",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_xxhash",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_xxhash.a",
+      "runtimeFiles": []
+    },
+    "ext_tremolo-Debug-armeabi-v7a": {
+      "artifactName": "ext_tremolo",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_tremolo",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_tremolo.a",
+      "runtimeFiles": []
+    },
+    "ext_clipper-Debug-armeabi-v7a": {
+      "artifactName": "ext_clipper",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_clipper",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_clipper.a",
+      "runtimeFiles": []
+    },
+    "ext_recast-Debug-armeabi-v7a": {
+      "artifactName": "ext_recast",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_recast",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_recast.a",
+      "runtimeFiles": []
+    },
+    "ext_convertUTF-Debug-armeabi-v7a": {
+      "artifactName": "ext_convertUTF",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_convertUTF",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_convertUTF.a",
+      "runtimeFiles": []
+    },
+    "ext_poly2tri-Debug-armeabi-v7a": {
+      "artifactName": "ext_poly2tri",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_poly2tri",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_poly2tri.a",
+      "runtimeFiles": []
+    },
+    "ext_tinyxml2-Debug-armeabi-v7a": {
+      "artifactName": "ext_tinyxml2",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_tinyxml2",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_tinyxml2.a",
+      "runtimeFiles": []
+    },
+    "cpp_android_spec-Debug-armeabi-v7a": {
+      "artifactName": "cpp_android_spec",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" cpp_android_spec",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\cocos\\platform\\libcpp_android_spec.a",
+      "runtimeFiles": []
+    },
+    "cocos2d-Debug-armeabi-v7a": {
+      "artifactName": "cocos2d",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" cocos2d",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libcocos2d.a",
+      "runtimeFiles": []
+    },
+    "MyGame-Debug-armeabi-v7a": {
+      "artifactName": "MyGame",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" MyGame",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libMyGame.so",
+      "runtimeFiles": []
+    },
+    "ext_unzip-Debug-armeabi-v7a": {
+      "artifactName": "ext_unzip",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_unzip",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_unzip.a",
+      "runtimeFiles": []
+    },
+    "ext_xxtea-Debug-armeabi-v7a": {
+      "artifactName": "ext_xxtea",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_xxtea",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_xxtea.a",
+      "runtimeFiles": []
+    },
+    "external-Debug-armeabi-v7a": {
+      "artifactName": "external",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" external",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libexternal.a",
+      "runtimeFiles": []
+    },
+    "ext_edtaa3func-Debug-armeabi-v7a": {
+      "artifactName": "ext_edtaa3func",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_edtaa3func",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_edtaa3func.a",
+      "runtimeFiles": []
+    },
+    "ext_cpufeatures-Debug-armeabi-v7a": {
+      "artifactName": "ext_cpufeatures",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_cpufeatures",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\external\\android-specific\\cpufeatures\\libext_cpufeatures.a",
+      "runtimeFiles": []
+    },
+    "ext_pvmp3dec-Debug-armeabi-v7a": {
+      "artifactName": "ext_pvmp3dec",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_pvmp3dec",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_pvmp3dec.a",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,5 +1,7 @@
 ﻿#include "Bullet.h"
 #include <typeinfo>
+#include <Enemy.h>
+#include <Box.h>
 USING_NS_CC;
 
 Bullet* Bullet::create()
@@ -81,37 +83,38 @@ bool Bullet::onContactBegin(cocos2d::PhysicsContact& contact)
 	auto nodeB = contact.getShapeB()->getBody()->getNode();
 	if (nodeA != this && nodeB != this)
 		return false;
-	// Lấy tên thực sự của node A và node B
 	std::string nodeNameA = nodeA ? typeid(*nodeA).name() : "Unknown";
 	std::string nodeNameB = nodeB ? typeid(*nodeB).name() : "Unknown";
+	// Use dynamic casting to check if the nodes are of type Character
+	Enemy* enemyA = dynamic_cast<Enemy*>(nodeA);
+	Enemy* enemyB = dynamic_cast<Enemy*>(nodeB);
 
-	// Hiển thị tên thực sự của node A và node B trong log
-	CCLOG("Bullet Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
-
-	// Kiểm tra xem va chạm có xảy ra với đối tượng Enemy hay không
-	if (nodeNameA == "class Enemy" || nodeNameB == "class Enemy") // Giả sử Enemy có tag là 2
+	// Check if either node is a Character
+	if (enemyA || enemyB)
 	{
-		CCLOG("REMOVE enemy");
-		// if (nodeNameA == "class Enemy")
-		nodeA->removeFromParent();
-		//else 
-		nodeB->removeFromParent();
-
-		// Loại bỏ viên đạn khi va chạm xảy ra với Enemy
-		return true; // Chỉ định rằng va chạm đã được xử lý
+		Enemy* enemy = enemyA ? enemyA : enemyB;
+		if (enemy)
+		{
+			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+			enemy->removeFromParentAndCleanup(true);
+		}
+		return true;
 	}
-	//if (nodeNameA != "class Character" && nodeNameB != "class Character") // Giả sử Enemy có tag là 2
-	//{
-	//	CCLOG("REMOVE enemy");
-	//	if (nodeNameA == "class Bullet")
-	//		nodeA->removeFromParent();
-	//	else
-	//		nodeB->removeFromParent();
+	Box* boxA = dynamic_cast<Box*>(nodeA);
+	Box* boxB = dynamic_cast<Box*>(nodeB);
 
-	//	// Loại bỏ viên đạn khi va chạm xảy ra với Enemy
-	//	return true; // Chỉ định rằng va chạm đã được xử lý
-	//}
+	// Check if either node is a Character
+	if (boxA || boxB)
+	{
+		Box* box = boxA ? boxA : boxB;
+		if (box)
+		{
+			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+			box->onDestruct();
+		}
+		return true;
+	}
 
-	return false; // Trả về false nếu va chạm không được xử lý
+	return false; // Return false if the collision is not handled
 }
 

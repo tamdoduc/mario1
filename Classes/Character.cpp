@@ -129,6 +129,10 @@ void Character::createIdleAnimation()
 	}
 
 	idleAnimate = CustomAnimation::create(frameNames, 0.1f);
+    if (idleAnimate == nullptr) {
+        cocos2d::log("Failed to create idle animation");
+        return;
+    }
 	this->addChild(idleAnimate);
 	idleAnimate->setPosition(this->getContentSize() / 2);
 	idleAnimate->setVisible(false);

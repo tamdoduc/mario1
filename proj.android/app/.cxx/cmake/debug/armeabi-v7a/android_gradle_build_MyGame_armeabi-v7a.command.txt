@@ -1,0 +1,7 @@
+Executable : C:\Users\Turtle\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\Projects\mario1\proj.android\app\.cxx\cmake\debug\armeabi-v7a
+MyGame
+jvmArgs : 
+
