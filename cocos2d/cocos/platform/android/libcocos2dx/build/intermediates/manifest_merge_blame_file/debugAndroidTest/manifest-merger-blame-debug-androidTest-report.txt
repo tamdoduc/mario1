@@ -1,0 +1,37 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.cocos2dx.lib.test" >
+4
+5    <uses-sdk
+5-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:5:5-74
+6        android:minSdkVersion="16"
+6-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:5:15-41
+7        android:targetSdkVersion="26" />
+7-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:11:5-15:71
+10        android:name="android.test.InstrumentationTestRunner"
+10-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:11:22-75
+11        android:functionalTest="false"
+11-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:13:22-53
+13        android:label="Tests for org.cocos2dx.lib.test"
+13-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:15:22-69
+14        android:targetPackage="org.cocos2dx.lib.test" />
+14-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:12:22-67
+15
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->[:libcocos2dx] D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-66
+16-->[:libcocos2dx] D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-63
+17
+18    <application android:debuggable="true" >
+18-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:7:5-9:19
+18-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:7:18-43
+19        <uses-library android:name="android.test.runner" />
+19-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:8:9-60
+19-->D:\Projects\mario1\cocos2d\cocos\platform\android\libcocos2dx\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7372542212331806724.xml:8:23-57
+20    </application>
+21
+22</manifest>

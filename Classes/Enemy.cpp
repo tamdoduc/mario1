@@ -19,7 +19,7 @@ Enemy* Enemy::create()
 
 bool Enemy::init()
 {
-    if (!Sprite::initWithFile("Enemy/Fly_1.png"))
+    if (!Sprite::initWithFile("Fly_1.png"))
     {
         return false;
     }
@@ -113,7 +113,7 @@ void Enemy::createRunAnimation()
     std::vector<std::string> frameNames;
     for (int i = 1; i <= 6; ++i) // Replace N with the number of frames
     {
-        frameNames.push_back(StringUtils::format("Enemy/Fly_%d.png", i));
+        frameNames.push_back(StringUtils::format("Fly_%d.png", i));
     }
 
     runAnimate = CustomAnimation::create(frameNames, 0.1f);

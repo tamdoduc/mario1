@@ -30,7 +30,7 @@ android {
         java.srcDir "src"
         res.srcDir "res"
         manifest.srcFile "AndroidManifest.xml"
-        assets.srcDir "../../Resources"
+        assets.srcDirs = ['../../Resources'] // Chú ý: đổi thành srcDirs để bao gồm nhiều thư mục nếu cần
     }
 
     externalNativeBuild {
@@ -41,7 +41,7 @@ android {
 
     signingConfigs {
 
-       release {
+        release {
             if (project.hasProperty("RELEASE_STORE_FILE")) {
                 storeFile file(RELEASE_STORE_FILE)
                 storePassword RELEASE_STORE_PASSWORD
@@ -80,10 +80,10 @@ android.applicationVariants.all { variant ->
     delete dest_assets_folder
     def targetName = variant.name.capitalize()
     def copyTaskName = "copy${targetName}ResourcesToAssets"
-    
+
     tasks.register(copyTaskName) {
         copy {
-            from "${buildDir}/../../../Resources"
+            from "${project_root_folder}/Resources" // Đường dẫn chính xác đến thư mục Resources
             into "${buildDir}/intermediates/assets/${variant.dirName}"
             exclude "**/*.gz"
         }

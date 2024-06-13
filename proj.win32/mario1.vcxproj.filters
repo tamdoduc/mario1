@@ -43,6 +43,9 @@
     <ClCompile Include="D:\Projects\mario1\Classes\Door.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projects\mario1\Classes\UILayer.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Projects\mario1\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
@@ -96,125 +99,62 @@
     <ClInclude Include="D:\Projects\mario1\Classes\Door.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Classes\UILayer.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projects\mario1\proj.win32\main.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_1.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_1.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_2.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_2.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_3.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_3.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_4.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_4.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_5.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_5.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_6.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_6.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Appearing_7.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Appearing_7.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_1.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Background_tutorial.jpg">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_2.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Background_tutorial2.jpeg">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_3.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (1).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_4.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (2).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_5.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (3).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_6.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (4).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Hit_7.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (5).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_1.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (6).png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_10.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_11.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_2.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_3.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_4.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_5.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_6.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_7.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_8.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Idle_9.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Jump_1.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_1.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_10.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_11.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_12.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_2.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_3.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_4.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_5.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_6.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_7.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_8.png">
-      <Filter>Resources\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Character\Run_9.png">
-      <Filter>Resources\Character</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Box (7).png">
+      <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\CloseNormal.png">
       <Filter>Resources</Filter>
@@ -222,28 +162,85 @@
     <ClInclude Include="D:\Projects\mario1\Resources\CloseSelected.png">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_1.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_1.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_2.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_2.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_3.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_3.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_4.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_4.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_5.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_5.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Enemy\Fly_6.png">
-      <Filter>Resources\Enemy</Filter>
+    <ClInclude Include="D:\Projects\mario1\Resources\Fly_6.png">
+      <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\GameOver.png">
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\HelloWorld.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_1.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_2.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_3.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_4.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_5.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_6.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Hit_7.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_1.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_10.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_11.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_2.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_3.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_4.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_5.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_6.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_7.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_8.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Idle_9.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Jump_1.png">
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\LevelComplete.jpg">
@@ -258,41 +255,47 @@
     <ClInclude Include="D:\Projects\mario1\Resources\Map.tsx">
       <Filter>Resources</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_1.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_10.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_11.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_12.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_2.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_3.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_4.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_5.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_6.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_7.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_8.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\Run_9.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\Tileset.png">
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\Tileset.tsx">
       <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Background_tutorial.jpg">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Background_tutorial2.jpeg">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (1).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (2).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (3).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (4).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (5).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (6).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\Box (7).png">
-      <Filter>Resources\Tutorial</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects\mario1\Resources\Tutorial\hand.png">
-      <Filter>Resources\Tutorial</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\attack.png">
       <Filter>Resources</Filter>
@@ -320,6 +323,9 @@
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\fonts\arial.ttf">
       <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\mario1\Resources\hand.png">
+      <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projects\mario1\Resources\heart.png">
       <Filter>Resources</Filter>
@@ -360,15 +366,6 @@
   <ItemGroup>
     <Filter Include="Resources">
       <UniqueIdentifier>{A1E9959C-2448-3EC6-884A-65CB3C0412AB}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Character">
-      <UniqueIdentifier>{F8D47B90-424E-3A5F-9603-0BF1609747DE}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Enemy">
-      <UniqueIdentifier>{F3835029-3F21-3EF0-86BF-659A15BD9711}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Tutorial">
-      <UniqueIdentifier>{8AE125DD-D9DC-3818-A3C7-B2C99E996816}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\fonts">
       <UniqueIdentifier>{956DA829-D052-3A89-BE18-998ED044624B}</UniqueIdentifier>

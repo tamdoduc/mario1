@@ -35,7 +35,7 @@ bool MainMenuScene::init()
     this->addChild(menu, 1);
 
 
-    auto background = Sprite::create("mainmenubg.jpg");
+    auto background = Sprite::create("Background_tutorial2.jpeg");
     background->setPosition(Vec2(this->getContentSize().width / 2, this->getContentSize().height / 2));
     int desiredWidth = 960;
     int desiredHeight = 540;
@@ -48,6 +48,8 @@ bool MainMenuScene::init()
 
 void MainMenuScene::menuPlayCallback(Ref* pSender)
 {
+    CCLOG("Start test");
+
     std::string filePath = cocos2d::FileUtils::getInstance()->getWritablePath() + "level.json";
     auto fileUtils = cocos2d::FileUtils::getInstance();
 
@@ -58,11 +60,13 @@ void MainMenuScene::menuPlayCallback(Ref* pSender)
     {
         // File exists, load HelloWorld scene
         scene = HelloWorld::createScene();
+        //scene = Tutorial::createScene();
     }
     else
     {
         // File does not exist, load Tutorial scene
         scene = Tutorial::createScene();
+       // scene = HelloWorld::createScene();
     }
     Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 255, 255)));
 }

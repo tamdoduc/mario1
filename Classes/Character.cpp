@@ -34,10 +34,10 @@ bool Character::init()
 		return false;
 	}
 
-	this->setTexture("Character/Idle_1.png");
+	this->setTexture("Idle_2.png");
 
-	int desiredWidth = 25;
-	int desiredHeight = 25;
+	int desiredWidth = 50;
+	int desiredHeight = 50;
 
 	this->setScale(desiredWidth / this->getContentSize().width, desiredHeight / this->getContentSize().height);
 
@@ -109,7 +109,7 @@ void Character::createAppearAnimation()
 	std::vector<std::string> frameNames;
 	for (int i = 1; i <= 7; ++i) // Replace N with the number of frames
 	{
-		frameNames.push_back(StringUtils::format("Character/Appearing_%d.png", i));
+		frameNames.push_back(StringUtils::format("Appearing_%d.png", i));
 	}
 
 	appearAnimate = CustomAnimation::create(frameNames, 0.15f);
@@ -125,7 +125,7 @@ void Character::createIdleAnimation()
 	std::vector<std::string> frameNames;
 	for (int i = 1; i <= 11; ++i) // Replace N with the number of frames
 	{
-		frameNames.push_back(StringUtils::format("Character/idle_%d.png", i));
+		frameNames.push_back(StringUtils::format("Idle_%d.png", i));
 	}
 
 	idleAnimate = CustomAnimation::create(frameNames, 0.1f);
@@ -145,7 +145,7 @@ void Character::createJumpAnimation()
 	std::vector<std::string> frameNames;
 	for (int i = 1; i <= 1; ++i) // Replace N with the number of frames
 	{
-		frameNames.push_back(StringUtils::format("Character/Jump_%d.png", i));
+		frameNames.push_back(StringUtils::format("Jump_%d.png", i));
 	}
 
 	jumpAnimate = CustomAnimation::create(frameNames, 0.1f);
@@ -161,7 +161,7 @@ void Character::createRunAnimation()
 	std::vector<std::string> frameNames;
 	for (int i = 1; i <= 12; ++i) // Replace N with the number of frames
 	{
-		frameNames.push_back(StringUtils::format("Character/Run_%d.png", i));
+		frameNames.push_back(StringUtils::format("Run_%d.png", i));
 	}
 
 	runAnimate = CustomAnimation::create(frameNames, 0.1f);
@@ -177,7 +177,7 @@ void Character::createDieAnimation()
 	std::vector<std::string> frameNames;
 	for (int i = 1; i <= 7; ++i) // Replace N with the number of frames
 	{
-		frameNames.push_back(StringUtils::format("Character/Hit_%d.png", i));
+		frameNames.push_back(StringUtils::format("Hit_%d.png", i));
 	}
 
 	dieAnimate = CustomAnimation::create(frameNames, 0.3f);

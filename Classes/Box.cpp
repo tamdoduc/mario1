@@ -19,7 +19,7 @@ Box* Box::create()
 
 bool Box::init()
 {
-    if (!Sprite::initWithFile("Tutorial/Box (2).png"))
+    if (!Sprite::initWithFile("Box (2).png"))
     {
         return false;
     }
@@ -55,7 +55,7 @@ void Box::createDestructAnimation()
     std::vector<std::string> frameNames;
     for (int i = 2; i <= 7; ++i) // Replace N with the number of frames
     {
-        frameNames.push_back(StringUtils::format("Tutorial/Box (%d).png", i));
+        frameNames.push_back(StringUtils::format("Box (%d).png", i));
     }
 
     destructAnimate = CustomAnimation::create(frameNames, 0.15f);

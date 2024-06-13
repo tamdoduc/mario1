@@ -1,0 +1,157 @@
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Turtle/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)
+  CMakeLists.txt:30 (project)
+
+
+Check for working C compiler: D:/android-ndk-r26d/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Check for working C compiler: D:/android-ndk-r26d/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works
+Detecting C compiler ABI info
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Detecting C compiler ABI info - done
+Detecting C compile features
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Detecting C compile features - done
+Check for working CXX compiler: D:/android-ndk-r26d/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Check for working CXX compiler: D:/android-ndk-r26d/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works
+Detecting CXX compiler ABI info
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Detecting CXX compiler ABI info - done
+Detecting CXX compile features
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at D:/android-ndk-r26d/build/cmake/android-legacy.toolchain.cmake:413 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  D:/android-ndk-r26d/build/cmake/android.toolchain.cmake:54 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+Detecting CXX compile features - done
+using toolchain file:D:/android-ndk-r26d/build/cmake/android.toolchain.cmake
+PROJECT_NAME:mario1
+PROJECT_SOURCE_DIR:D:/Projects/mario1
+COCOS2DX_ROOT_PATH:D:/Projects/mario1/cocos2d
+CMAKE_MODULE_PATH:D:/Projects/mario1/cocos2d/cmake/Modules/
+PROJECT_BINARY_DIR:D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a
+ENGINE_BINARY_PATH:D:/Projects/mario1/proj.android/app/.cxx/cmake/release/armeabi-v7a/engine
+PYTHON_PATH:C:/Python27/python.exe
+COCOS_COMMAND_PATH:D:/cocos2d-x-4.0/cocos2d-x-4.0/tools/cocos2d-console/bin/cocos
+HOST_SYSTEM:Windows
+CMAKE_GENERATOR: Ninja
+COCOS2DX_LUAJIT_ROOT:D:/cocos2d-x-4.0/cocos2d-x-4.0/tools/cocos2d-console/bin/../plugins/plugin_luacompile/bin
+Configuring done

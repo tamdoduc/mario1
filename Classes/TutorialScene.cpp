@@ -39,21 +39,28 @@ bool Tutorial::init()
 	_character = Character::create();
 	this->addChild(_character);
 	_character->setScene(this);
+	_character->setScale(_character->getScale() * 2);
+	Size visibleSize = Director::getInstance()->getVisibleSize();
 
-	auto background = Sprite::create("Tutorial/Background_tutorial2.jpeg");
-	background->setScale(1.3f);
+	auto background = Sprite::create("Background_tutorial2.jpeg");
+	background->setScale(3);
 	background->setPosition(Vec2(this->getContentSize().width / 2, this->getContentSize().height / 2));
 	this->addChild(background, -1);
 
 	_tileMap = TileMap::create("map_tutorial.tmx");
 	if (_tileMap)
 	{
+		_tileMap->setScale(2.5f);
 		_tileMap->setPosition(Vec2(0, 0));
 		this->addChild(_tileMap, 0);
 		_tileMap->addColliders();
 	}
+
+	CCLOG(("Done tile map"));
 	auto box = Box::create();
-	box->setPos(Vec2(736, 48));
+	box->setPos(Vec2(736*2.5, 48*2.5));
+	box->setScale(box
+		->getScale() * 2.5);
 	this->addChild(box);
 	_uiLayer = Layer::create();
 	this->addChild(_uiLayer, 1);
@@ -85,20 +92,20 @@ bool Tutorial::init()
 
 	// Ẩn tất cả các nút điều khiển ban đầu
 	setControlButtonsVisible(false);
-
 	// Tạo sprite bàn tay và text hướng dẫn cho nút phải, nhưng ẩn chúng ban đầu
-	auto rightHandSprite = Sprite::create("Tutorial/hand.png");
-	rightHandSprite->setPosition(Vec2(100, 25));
+	auto rightHandSprite = Sprite::create("hand.png");
+	rightHandSprite->setPosition(Vec2(350, 25));
 	rightHandSprite->setScale(0.5f);
-	int desiredWidth = 50;
-	int desiredHeight = 50;
+	int desiredWidth = 50*(visibleSize.width/960.0f);
+	int desiredHeight = 50 * (visibleSize.width / 960.0f);
 
-	rightHandSprite->setScale(desiredWidth / rightHandSprite->getContentSize().width, desiredHeight / rightHandSprite->getContentSize().height);
+	rightHandSprite->setScale(2*desiredWidth / rightHandSprite->getContentSize().width,2* desiredHeight / rightHandSprite->getContentSize().height);
 	rightHandSprite->setVisible(false); // Ẩn ban đầu
+	
 	fadeLayer->addChild(rightHandSprite, 101);
 
 	auto rightLabel = Label::createWithTTF("Touch this button to MOVE RIGHT", "fonts/Marker Felt.ttf", 24);
-	rightLabel->setPosition(Vec2(200, 80));
+	rightLabel->setPosition(Vec2(200, 200));
 	rightLabel->setVisible(false); // Ẩn ban đầu
 	fadeLayer->addChild(rightLabel, 101);
 
@@ -106,22 +113,27 @@ bool Tutorial::init()
 	_rightLabel = rightLabel;
 	_fadeLayer = fadeLayer;
 
+	
 	// Tạo sprite bàn tay và text hướng dẫn cho nhảy
-	auto jumpHandSprite = Sprite::create("Tutorial/hand.png");
-	jumpHandSprite->setPosition(Vec2(900, 60)); // Đặt vị trí mong muốn của bàn tay
+	//jumpHandSprite->setAnchorPoint(Vec2(0, 1));
 
 
 	auto jumpButton = ui::Button::create("up.png", "up.png");
-	jumpButton->setPosition(Vec2(350, -350) + Vec2(100, 150));
+	jumpButton->setPosition(Vec2(visibleSize.width/2-75, -visibleSize.height/2+200));
 	jumpButton->addTouchEventListener(CC_CALLBACK_2(Tutorial::menuJumpCallback, this));
 	_jumpButton = jumpButton;
+	jumpButton->setScale(-1 * desiredWidth / jumpButton->getContentSize().width, desiredHeight / jumpButton->getContentSize().height);
+
 	_uiLayer->addChild(jumpButton);
-	jumpHandSprite->setScale(-1 * desiredWidth / jumpHandSprite->getContentSize().width, desiredHeight / jumpHandSprite->getContentSize().height);
+	auto jumpHandSprite = Sprite::create("hand.png");
+	jumpHandSprite->setPosition(Vec2(visibleSize.width  - 100,  70)); // Đặt vị trí mong muốn của bàn tay
+	jumpHandSprite->setScale(2*-1 * desiredWidth / jumpHandSprite->getContentSize().width,2* desiredHeight / jumpHandSprite->getContentSize().height);
 
 	_fadeLayer->addChild(jumpHandSprite, 101); // 101 là z-order, trên fadeLayer
 	_jumpHandSprite = jumpHandSprite;
 	auto jumpLabel = Label::createWithTTF("OH! The obstructive terrain!!\nTouch this button to JUMP over it", "fonts/Marker Felt.ttf", 24);
-	jumpLabel->setPosition(Vec2(750, 50)); // Đặt vị trí bên cạnh bàn tay
+	//jumpLabel->setAnchorPoint(Vec2(0, 1));
+	jumpLabel->setPosition(Vec2(visibleSize.width  - 250,  70)); // Đặt vị trí bên cạnh bàn tay
 	_fadeLayer->addChild(jumpLabel, 101); // 101 là z-order, trên fadeLayer
 
 	_jumpLabel = jumpLabel;
@@ -132,13 +144,14 @@ bool Tutorial::init()
 
 
 	// Tạo sprite bàn tay và text hướng dẫn cho nhảy
-	auto shootHandSprite = Sprite::create("Tutorial/hand.png");
-	shootHandSprite->setPosition(Vec2(900, 25)); // Đặt vị trí mong muốn của bàn tay
+	auto shootHandSprite = Sprite::create("hand.png");
+	shootHandSprite->setPosition(Vec2(visibleSize.width - 100, 20)); // Đặt vị trí mong muốn của bàn tay
 
 
 	auto shootButton = ui::Button::create("attack.png", "attack.png");
-	shootButton->setPosition(Vec2(350, -350) + Vec2(100, 100));
 	shootButton->addTouchEventListener(CC_CALLBACK_2(Tutorial::menuShootCallback, this));
+	shootButton->setPosition(Vec2(visibleSize.width / 2 - 75, -visibleSize.height / 2 + 50));
+	shootButton->setScale(-1 * desiredWidth / shootButton->getContentSize().width, desiredHeight / shootButton->getContentSize().height);
 	_shootButton = shootButton;
 	_uiLayer->addChild(shootButton);
 	shootHandSprite->setScale(-1 * desiredWidth / shootHandSprite->getContentSize().width, desiredHeight / shootHandSprite->getContentSize().height);
@@ -146,7 +159,7 @@ bool Tutorial::init()
 	_fadeLayer->addChild(shootHandSprite, 101); // 101 là z-order, trên fadeLayer
 
 	auto shootLabel = Label::createWithTTF("The BOX is getting in your way!!!\n Touch the shoot button to destroy it", "fonts/Marker Felt.ttf", 24);
-	shootLabel->setPosition(Vec2(750, 25)); // Đặt vị trí bên cạnh bàn tay
+	shootLabel->setPosition(Vec2(visibleSize.width - 300, 30)); // Đặt vị trí bên cạnh bàn tay
 	_fadeLayer->addChild(shootLabel, 101); // 101 là z-order, trên fadeLayer
 	_shootLabel = shootLabel;
 
@@ -165,13 +178,16 @@ bool Tutorial::init()
 
 	door = Door::create();
 	door->init();
-	door->setPosition(Vec2(_tileMap->getMapSize().width - 50, 50));
+	door->setPosition(Vec2(850 * 2.5, 48 * 2.5));
 	//door->setPosition(Vec2( 150, 50));
 	this->addChild(door);
-	door->setActionCallback([this]() {
+	door->setScale(door->getScale() * 2.5);
+		door->setActionCallback([this]() {
 		// Define what happens when the character collides with the door
 		this->OnWin();
 		});
+
+
 	this->scheduleUpdate();
 
 	return true;
@@ -219,16 +235,16 @@ void Tutorial::showLeftControlTutorial()
 	_rightLabel->setVisible(false);
 
 	// Hiện nút trái và text hướng dẫn
-	auto leftHandSprite = Sprite::create("Tutorial/hand.png");
-	leftHandSprite->setPosition(Vec2(50, 25));
+	auto leftHandSprite = Sprite::create("hand.png");
+	leftHandSprite->setPosition(Vec2(150, 100));
 	int desiredWidth = 50;
 	int desiredHeight = 50;
 
-	leftHandSprite->setScale(desiredWidth / leftHandSprite->getContentSize().width, desiredHeight / leftHandSprite->getContentSize().height);
+	leftHandSprite->setScale(2*desiredWidth / leftHandSprite->getContentSize().width,2* desiredHeight / leftHandSprite->getContentSize().height);
 	_fadeLayer->addChild(leftHandSprite, 101);
 
 	auto leftLabel = Label::createWithTTF("Touch this button to MOVE LEFT", "fonts/Marker Felt.ttf", 24);
-	leftLabel->setPosition(Vec2(140, 80));
+	leftLabel->setPosition(Vec2(140, 200));
 	_fadeLayer->addChild(leftLabel, 101);
 
 	_leftHandSprite = leftHandSprite;
@@ -275,15 +291,22 @@ void Tutorial::setControlButtonsVisible(bool visible)
 
 void Tutorial::createControlButtons()
 {
-	Vec2 btnControllerLeft = Vec2(-500, -370);
-	Vec2 btnControllerRight = Vec2(350, -350);
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Vec2 btnControllerLeft = Vec2(-visibleSize.width / 2, -visibleSize.height / 2);
+	Vec2 btnControllerRight = Vec2(visibleSize.width / 2, -visibleSize.height / 2);
+
+	int desiredWidth = 50 * (visibleSize.width / 960.0f);
+	int desiredHeight = 50 * (visibleSize.width / 960.0f);
 	_leftButton = ui::Button::create("left.png", "left.png");
-	_leftButton->setPosition(btnControllerLeft + Vec2(50, 125));
+	_leftButton->setPosition(btnControllerLeft + Vec2(50, 50));
+	_leftButton->setScale(  desiredWidth / _leftButton->getContentSize().width, desiredHeight / _leftButton->getContentSize().height);
+	
 	_uiLayer->addChild(_leftButton);
 
 	_rightButton = ui::Button::create("right.png", "right.png");
-	_rightButton->setPosition(btnControllerLeft + Vec2(100, 125));
+	_rightButton->setPosition(btnControllerLeft + Vec2(200, 50));
 	_uiLayer->addChild(_rightButton);
+	_rightButton->setScale(  desiredWidth / _rightButton->getContentSize().width, desiredHeight / _rightButton->getContentSize().height);
 
 	_shootButton = ui::Button::create("attack.png", "attack.png");
 	_shootButton->setPosition(btnControllerRight + Vec2(100, 100));
@@ -318,7 +341,8 @@ void Tutorial::setPhysicWorld(cocos2d::PhysicsWorld* m_world)
 
 void Tutorial::initHPUI()
 {
-	Vec2 holderHeartPos = Vec2(-400, 200);
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Vec2 holderHeartPos = Vec2(-visibleSize.width/2+10, 200);
 	int desiredWidth = 25;
 	int desiredHeight = 25;
 
@@ -430,18 +454,19 @@ void Tutorial::update(float dt)
 		Vec2 characterPosition = _character->getPosition();
 		auto camera = this->getDefaultCamera();
 
+		Size visibleSize = Director::getInstance()->getVisibleSize();
 		float cameraHalfWidth = camera->getContentSize().width;
-		float minXPosition = 480;
-		float maxXPosition = this->_tileMap->getMapSize().width - 480;
+		float minXPosition = visibleSize.width/2;
+		float maxXPosition = this->_tileMap->getMapSize().width*2 - visibleSize.width/2;
 
 		float newCameraX = std::max(characterPosition.x, minXPosition);
 		newCameraX = std::min(newCameraX, maxXPosition);
 		camera->setPosition(cocos2d::Vec2(newCameraX, camera->getPosition().y));
-		if (characterPosition.x >= 450 && isFirstTouchJump)
+		if (characterPosition.x >= 450*2.5 && isFirstTouchJump)
 		{
 			showJumpTutorial();
 		}
-		if (characterPosition.x >= 600 && isFirstTouchShoot)
+		if (characterPosition.x >= 600*2.5 && isFirstTouchShoot)
 		{
 			showShootTutorial();
 		}

@@ -5653,6 +5653,11 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "D:\\Projects\\mario1\\Classes\\UILayer.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "D:\\Projects\\mario1\\proj.android\\app\\jni\\hellocpp\\main.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
@@ -5717,6 +5722,10 @@
         },
         {
           "header": "D:\\Projects\\mario1\\Classes\\Door.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\Projects\\mario1\\Classes\\UILayer.h",
           "workingDirectoryOrdinal": 0
         }
       ],

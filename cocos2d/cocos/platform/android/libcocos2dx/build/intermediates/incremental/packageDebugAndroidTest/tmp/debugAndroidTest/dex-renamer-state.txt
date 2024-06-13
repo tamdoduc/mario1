@@ -1,0 +1,4 @@
+#Tue Jun 11 23:12:52 ICT 2024
+base.0=D\:\\Projects\\mario1\\cocos2d\\cocos\\platform\\android\\libcocos2dx\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

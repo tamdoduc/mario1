@@ -1,2 +1,4 @@
-﻿  MainMenuScene.cpp
+﻿  UILayer.cpp
+D:\Projects\mario1\Classes\UILayer.cpp(101,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Projects\mario1\Classes\UILayer.cpp(109,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   mario1.vcxproj -> D:\Projects\mario1\proj.win32\bin\mario1\Debug\mario1.exe

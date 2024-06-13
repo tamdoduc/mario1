@@ -50,9 +50,9 @@ set(GAME_HEADER)
 set(GAME_RES_FOLDER
     "${CMAKE_CURRENT_SOURCE_DIR}/Resources"
     )
-if(APPLE OR WINDOWS)
+
     cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
-endif()
+
 
 # add cross-platforms source files and header files 
 list(APPEND GAME_SOURCE
@@ -70,6 +70,7 @@ list(APPEND GAME_SOURCE
      Classes/TutorialScene.cpp
      Classes/Box.cpp
      Classes/Door.cpp
+     Classes/UILayer.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
@@ -87,6 +88,7 @@ list(APPEND GAME_HEADER
      Classes/TutorialScene.h
      Classes/Box.h
      Classes/Door.h
+     Classes/UILayer.h
      )
 
 if(ANDROID)
