@@ -24,14 +24,15 @@ bool Box::init()
         return false;
     }
 
-    int desiredWidth = 16;
-    int desiredHeight = 16;
+    int desiredWidth = 25;
+    int desiredHeight = 25;
 
     //this->setScale(desiredWidth / this->getContentSize().width, desiredHeight / this->getContentSize().height);
 
 
     // Add physics body
-    boxBody = PhysicsBody::createBox(this->getContentSize());
+   // boxBody = PhysicsBody::createBox(this->getContentSize());
+    boxBody = PhysicsBody::createBox(Size(25, 25));
     boxBody->setDynamic(false);
     boxBody->setCategoryBitmask(0x04);
     boxBody->setCollisionBitmask(0x0B);
@@ -74,5 +75,5 @@ void Box::onDestruct()
 
     this->scheduleOnce([this](float) {
         this->removeFromParentAndCleanup(true);
-        }, 0.15f*6, "reset_position_key");
+        }, 0.15f*5, "reset_position_key");
 }

@@ -16,6 +16,8 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(MainMenuScene);
+    int getLevel();
+    int level;
 };
 
 #endif // __MAIN_MENU_SCENE_H__

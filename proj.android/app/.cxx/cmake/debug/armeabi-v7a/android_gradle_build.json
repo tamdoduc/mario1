@@ -5603,12 +5603,22 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "D:\\Projects\\mario1\\Classes\\BulletE.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "D:\\Projects\\mario1\\Classes\\TileMap.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
           "src": "D:\\Projects\\mario1\\Classes\\Enemy.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\Projects\\mario1\\Classes\\Enemy2.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
@@ -5658,6 +5668,16 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "D:\\Projects\\mario1\\Classes\\Elevator.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\Projects\\mario1\\Classes\\ElevatorManager.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "D:\\Projects\\mario1\\proj.android\\app\\jni\\hellocpp\\main.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
@@ -5681,11 +5701,19 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "header": "D:\\Projects\\mario1\\Classes\\BulletE.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "header": "D:\\Projects\\mario1\\Classes\\TileMap.h",
           "workingDirectoryOrdinal": 0
         },
         {
           "header": "D:\\Projects\\mario1\\Classes\\Enemy.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\Projects\\mario1\\Classes\\Enemy2.h",
           "workingDirectoryOrdinal": 0
         },
         {
@@ -5726,6 +5754,14 @@
         },
         {
           "header": "D:\\Projects\\mario1\\Classes\\UILayer.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\Projects\\mario1\\Classes\\Elevator.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\Projects\\mario1\\Classes\\ElevatorManager.h",
           "workingDirectoryOrdinal": 0
         }
       ],
@@ -5805,22 +5841,6 @@
       ],
       "headers": [],
       "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_edtaa3func.a"
-    },
-    "ext_cpufeatures-Debug-armeabi-v7a": {
-      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_cpufeatures",
-      "buildType": "debug",
-      "toolchain": "129314722",
-      "abi": "armeabi-v7a",
-      "artifactName": "ext_cpufeatures",
-      "files": [
-        {
-          "src": "D:\\android-ndk-r26d\\sources\\android\\cpufeatures\\cpu-features.c",
-          "flagsOrdinal": 16,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\external\\android-specific\\cpufeatures\\libext_cpufeatures.a"
     },
     "ext_pvmp3dec-Debug-armeabi-v7a": {
       "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_pvmp3dec",
@@ -5977,6 +5997,22 @@
       ],
       "headers": [],
       "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_pvmp3dec.a"
+    },
+    "ext_cpufeatures-Debug-armeabi-v7a": {
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_cpufeatures",
+      "buildType": "debug",
+      "toolchain": "129314722",
+      "abi": "armeabi-v7a",
+      "artifactName": "ext_cpufeatures",
+      "files": [
+        {
+          "src": "D:\\android-ndk-r26d\\sources\\android\\cpufeatures\\cpu-features.c",
+          "flagsOrdinal": 16,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\external\\android-specific\\cpufeatures\\libext_cpufeatures.a"
     }
   },
   "toolchains": {

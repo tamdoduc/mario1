@@ -60,8 +60,10 @@ list(APPEND GAME_SOURCE
      Classes/HelloWorldScene.cpp
      Classes/Character.cpp
      Classes/Bullet.cpp
+     Classes/BulletE.cpp
      Classes/TileMap.cpp
      Classes/Enemy.cpp
+     Classes/Enemy2.cpp
      Classes/EnemyManager.cpp
      Classes/MyCamera.cpp
      Classes/MainMenuScene.cpp
@@ -71,14 +73,19 @@ list(APPEND GAME_SOURCE
      Classes/Box.cpp
      Classes/Door.cpp
      Classes/UILayer.cpp
+     Classes/Elevator.cpp
+     Classes/ElevatorManager.cpp
+
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
      Classes/HelloWorldScene.h
      Classes/Character.h
      Classes/Bullet.h
+     Classes/BulletE.h
      Classes/TileMap.h
      Classes/Enemy.h
+     Classes/Enemy2.h
      Classes/EnemyManager.h
      Classes/MyCamera.h
      Classes/MainMenuScene.h
@@ -89,6 +96,9 @@ list(APPEND GAME_HEADER
      Classes/Box.h
      Classes/Door.h
      Classes/UILayer.h
+     Classes/Elevator.h
+     Classes/ElevatorManager.h
+
      )
 
 if(ANDROID)

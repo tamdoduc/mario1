@@ -2,6 +2,10 @@
 #include "HelloWorldScene.h"
 #include "TutorialScene.h"
 #include "platform/CCFileUtils.h"
+#include "json/document.h"
+#include "json/writer.h"
+#include "json/stringbuffer.h"
+#include "platform/CCFileUtils.h"
 
 USING_NS_CC;
 
@@ -17,20 +21,21 @@ bool MainMenuScene::init()
     {
         return false;
     }
-
+    level = getLevel();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    // Create Play Button
-    auto playItem = MenuItemFont::create("Play", CC_CALLBACK_1(MainMenuScene::menuPlayCallback, this));
-    playItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 + 50));
+    std::string s = "Play";
+    if (level!=-1)
+        s = "Level: " + std::to_string(level);
+    auto playItem = MenuItemFont::create(s, CC_CALLBACK_1(MainMenuScene::menuPlayCallback, this));
+    playItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 + 100));
 
     // Create Exit Button
     auto exitItem = MenuItemFont::create("Exit", CC_CALLBACK_1(MainMenuScene::menuExitCallback, this));
     exitItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - 50));
 
     // Create menu, it's an autorelease object
-    auto menu = Menu::create(playItem, exitItem, nullptr);
+    auto menu = Menu::create( playItem, exitItem, nullptr);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
 
@@ -78,3 +83,26 @@ void MainMenuScene::menuExitCallback(Ref* pSender)
     exit(0);
 #endif
 }
+int MainMenuScene::getLevel() {
+    std::string filePath = cocos2d::FileUtils::getInstance()->getWritablePath() + "level.json";
+    std::string fileContent = cocos2d::FileUtils::getInstance()->getStringFromFile(filePath);
+
+    if (fileContent.empty()) {
+        CCLOG("File is empty or does not exist: %s", filePath.c_str());
+        return -1; // return a default value or handle the error as needed
+    }
+
+    rapidjson::Document document;
+    if (document.Parse(fileContent.c_str()).HasParseError()) {
+        CCLOG("Failed to parse JSON file: %s", filePath.c_str());
+        return -1; // return a default value or handle the error as needed
+    }
+
+    if (!document.HasMember("level") || !document["level"].IsInt()) {
+        CCLOG("JSON does not have 'level' member or 'level' is not an integer");
+        return -1; // return a default value or handle the error as needed
+    }
+
+    return document["level"].GetInt();
+}
+

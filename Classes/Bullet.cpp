@@ -2,6 +2,7 @@
 #include <typeinfo>
 #include <Enemy.h>
 #include <Box.h>
+#include <Enemy2.h>
 USING_NS_CC;
 
 Bullet* Bullet::create()
@@ -63,7 +64,7 @@ void Bullet::update(float dt)
 {
 	Vec2 currentPosition = this->getPosition();
 	currentPosition.x += _direction * _speed * dt;
-	traveledDistance += _direction * _speed * dt;
+	traveledDistance +=  _speed * dt;
 	this->setPosition(currentPosition);
 	if (traveledDistance >= 250.0f)
 	{
@@ -97,6 +98,20 @@ bool Bullet::onContactBegin(cocos2d::PhysicsContact& contact)
 		{
 			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
 			enemy->removeFromParentAndCleanup(true);
+		}
+		return true;
+	}
+	Enemy2* enemy2A = dynamic_cast<Enemy2*>(nodeA);
+	Enemy2* enemy2B = dynamic_cast<Enemy2*>(nodeB);
+
+	// Check if either node is a Character
+	if (enemy2A || enemy2B)
+	{
+		Enemy2* enemy2 = enemy2A ? enemy2A : enemy2B;
+		if (enemy2)
+		{
+			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+			enemy2->removeFromParentAndCleanup(true);
 		}
 		return true;
 	}

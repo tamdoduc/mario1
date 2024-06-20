@@ -163,18 +163,18 @@
       "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_edtaa3func.a",
       "runtimeFiles": []
     },
-    "ext_cpufeatures-Debug-armeabi-v7a": {
-      "artifactName": "ext_cpufeatures",
-      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_cpufeatures",
-      "abi": "armeabi-v7a",
-      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\external\\android-specific\\cpufeatures\\libext_cpufeatures.a",
-      "runtimeFiles": []
-    },
     "ext_pvmp3dec-Debug-armeabi-v7a": {
       "artifactName": "ext_pvmp3dec",
       "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_pvmp3dec",
       "abi": "armeabi-v7a",
       "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\lib\\libext_pvmp3dec.a",
+      "runtimeFiles": []
+    },
+    "ext_cpufeatures-Debug-armeabi-v7a": {
+      "artifactName": "ext_cpufeatures",
+      "buildCommand": "C:\\Users\\Turtle\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" ext_cpufeatures",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Projects\\mario1\\proj.android\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\engine\\external\\android-specific\\cpufeatures\\libext_cpufeatures.a",
       "runtimeFiles": []
     }
   }

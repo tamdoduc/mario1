@@ -38,7 +38,6 @@ bool Character::init()
 
 	int desiredWidth = 50;
 	int desiredHeight = 50;
-
 	this->setScale(desiredWidth / this->getContentSize().width, desiredHeight / this->getContentSize().height);
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -47,9 +46,9 @@ bool Character::init()
 	startPos = Vec2(50, 70);
 	this->setPosition(startPos);
 	PhysicsMaterial material;
-	material.density = 0.01f;
-	material.friction = 0.1f;
-	material.restitution = 0.1f;
+	//material.density = 0.01f;
+	//material.friction = 0.1f;
+	//material.restitution = 0.1f;
 
 	characterBody = PhysicsBody::createBox(this->getContentSize(), material);
 	characterBody->setDynamic(true);
@@ -68,7 +67,7 @@ bool Character::init()
 	isMoveRight = false;
 	isJumping = false;
 	direction = 1;
-	jumpForce = 1500.0f;
+	jumpForce = 1200;
 
 	auto contactListener = EventListenerPhysicsContact::create();
 	contactListener->onContactBegin = CC_CALLBACK_1(Character::onContactBegin, this);
@@ -231,7 +230,7 @@ void Character::update(float dt)
 	if (isMove)
 	{
 		Vec2 currentPosition = this->getPosition();
-		float movementSpeed = 25.0f;
+		float movementSpeed = 50.0f;
 
 		currentPosition.x += direction * movementSpeed * dt;
 
@@ -281,19 +280,40 @@ bool Character::onContactBegin(PhysicsContact& contact)
 
 	if (!isPlaying)
 		return true;
-	CCLOG("Character Contact");
 	auto nodeA = contact.getShapeA()->getBody()->getNode();
 	auto nodeB = contact.getShapeB()->getBody()->getNode();
-
+	if (nodeA != this && nodeB != this)
+		return false;
 	std::string nodeNameA = nodeA ? typeid(*nodeA).name() : "Unknown";
 	std::string nodeNameB = nodeB ? typeid(*nodeB).name() : "Unknown";
-
-	CCLOG("Bullet Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+	// Use dynamic casting to check if the nodes are of type Character
+	Enemy* enemyA = dynamic_cast<Enemy*>(nodeA);
+	Enemy* enemyB = dynamic_cast<Enemy*>(nodeB);
 	isJumping = false;
-	if (nodeNameA == "class Enemy" || nodeNameB == "class Enemy")
+	// Check if either node is a Character
+	if (enemyA || enemyB)
 	{
-		//CCLOG("LOSE");
-		OnLostHP();
+		Enemy* enemy = enemyA ? enemyA : enemyB;
+		if (enemy)
+		{
+			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+			this->OnLostHP();
+		}
+		return true;
+	}
+
+	Enemy2* enemy2A = dynamic_cast<Enemy2*>(nodeA);
+	Enemy2* enemy2B = dynamic_cast<Enemy2*>(nodeB);
+
+	// Check if either node is a Character
+	if (enemy2A || enemy2B)
+	{
+		Enemy2* enemy2 = enemy2A ? enemy2A : enemy2B;
+		if (enemy2)
+		{
+			CCLOG("Ground Contact: Node A: (%s), Node B: (%s)", nodeNameA.c_str(), nodeNameB.c_str());
+			this->OnLostHP();
+		}
 		return true;
 	}
 

@@ -20,6 +20,6 @@
   -- LUAJIT64_COMMAND:D:/cocos2d-x-4.0/cocos2d-x-4.0/tools/cocos2d-console/plugins/plugin_luacompile/bin/64bit/luajit-win32.exe
   -- cocos_mark_code_files: cocos2d
   -- cocos_mark_code_files: mario1
-  -- Configuring done (1.3s)
-  -- Generating done (3.0s)
+  -- Configuring done (0.5s)
+  -- Generating done (1.6s)
   -- Build files have been written to: D:/Projects/mario1/proj.win32

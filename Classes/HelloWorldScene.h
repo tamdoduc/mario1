@@ -8,7 +8,10 @@
 #include "TileMap.h"
 #include "Ground.h"
 #include "EnemyManager.h"
+#include "ElevatorManager.h"
 #include "MainMenuScene.h"
+#include <Door.h>
+
 
 class HelloWorld : public cocos2d::Scene
 {
@@ -24,6 +27,7 @@ public:
     void OnCharacterDie(int HPLeft);
     void OnLose();
     void update(float dt);
+    void OnWin();
 
     CREATE_FUNC(HelloWorld);
 
@@ -36,7 +40,13 @@ private:
     UILayer* _uiLayer;
     cocos2d::PhysicsWorld* world;
     
-    const int HPMax = 3;
+    Door* door;
+
+    int level;
+    int getLevel();
+    void incrementLevel();
+
+    std::vector<cocos2d::Vec2> lstPosDoor{ cocos2d::Vec2(2370, 300) ,cocos2d::Vec2(940, 1100)};
 };
 
 #endif // __HELLOWORLD_SCENE_H__

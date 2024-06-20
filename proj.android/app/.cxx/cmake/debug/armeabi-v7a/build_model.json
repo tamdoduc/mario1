@@ -199,7 +199,6 @@
       "project": {
         "compilerSettingsCacheFolder": "D:\\Projects\\mario1\\proj.android\\.cxx",
         "cxxFolder": "D:\\Projects\\mario1\\proj.android\\.cxx",
-        "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,

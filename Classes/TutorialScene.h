@@ -8,6 +8,7 @@
 #include "ui/CocosGUI.h"
 #include <EnemyManager.h>
 #include <Door.h>
+#include <UILayer.h>
 
 class Tutorial : public cocos2d::Scene
 {
@@ -21,15 +22,7 @@ public:
 
     void setPhysicWorld(cocos2d::PhysicsWorld* world);
     void initTouchEvent();
-    void createControlButtons();
-    void initHPUI();
-    void renderHPUI(int HPleft);
-    void menuCloseCallback(cocos2d::Ref* pSender);
     void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-    void menuJumpCallback(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
-    void menuShootCallback(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
-    void menuLeftCallback(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
-    void menuRightCallback(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void update(float dt);
     void OnCharacterDie(int HPLeft);
     void OnLose();
@@ -39,7 +32,7 @@ private:
     cocos2d::PhysicsWorld* world;
     Character* _character;
     TileMap* _tileMap;
-    cocos2d::Layer* _uiLayer;
+    UILayer* _uiLayer;
     std::vector<cocos2d::Sprite*> heartsMissing;
     std::vector<cocos2d::Sprite*> heartsFull;
     int HPMax = 5;
@@ -48,6 +41,7 @@ private:
     bool isFirstTouchJump = true;
     bool isFirstTouchShoot = true;
     Door* door;
+    const float SCALE = 1.2f;
 
     // Additional properties for tutorial
     cocos2d::Sprite* _leftHandSprite;
@@ -66,9 +60,7 @@ private:
     cocos2d::ui::Button* _jumpButton;
 
     void showRightControlTutorial();
-    void onRightButtonPressed(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void showLeftControlTutorial();
-    void onLeftButtonPressed(cocos2d::Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void setControlButtonsVisible(bool visible);
     void showJumpTutorial();
     void showShootTutorial();

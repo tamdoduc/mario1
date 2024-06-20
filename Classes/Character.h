@@ -4,6 +4,8 @@
 #include "Bullet.h" // Include Bullet header if it is in a different file
 #include "cocos2d.h"
 #include "CustomAnimation.h"
+#include "Enemy.h"
+#include "Enemy2.h"
 
 class HelloWorld;
 class Tutorial;
@@ -31,6 +33,7 @@ public:
     int HP = 5;
 
     bool isPlaying = false;
+    void OnLostHP();
 
 private:
 
@@ -53,7 +56,6 @@ private:
     HelloWorld* helloWorldScene;
     Tutorial* tutorialScene;
 
-    void OnLostHP();
     void createIdleAnimation();
     void createJumpAnimation();
     void createRunAnimation();

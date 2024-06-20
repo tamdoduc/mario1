@@ -11975,9 +11975,9 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="120"/>
-   <tile gid="121"/>
-   <tile gid="122"/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -12571,9 +12571,9 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="120"/>
-   <tile gid="121"/>
-   <tile gid="122"/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -13448,9 +13448,7 @@
  <objectgroup id="2" name="Colliders">
   <object id="1" x="0" y="143" width="16" height="1280"/>
   <object id="2" x="2" y="1375" width="558" height="49"/>
-  <object id="3" x="545" y="1329" width="47" height="14"/>
   <object id="4" x="609" y="1298" width="46" height="12"/>
-  <object id="5" x="672" y="1263" width="47" height="16"/>
   <object id="6" x="736" y="1216" width="48" height="14"/>
   <object id="7" x="800" y="1167" width="1614" height="48"/>
   <object id="8" x="1247" y="1137" width="31" height="29"/>
